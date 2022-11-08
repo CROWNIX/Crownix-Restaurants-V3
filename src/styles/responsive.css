@@ -1,0 +1,332 @@
+/* AppBar / header */
+:root {
+    --yellow: #f5c32c;
+    --orange: #fca61f;
+    --black: #242d49;
+    --gray: rgba(36, 45, 73, 0.65);
+    --cardShadow: 0px 4px 17px 2px rgba(0, 0, 0, 0.25);
+    --headerColor: rgba(255, 255, 255, 0.8);
+    --buttonBg: linear-gradient(98.63deg, #f9a225 0%, #f95f35 100%);
+    --inputColor: rgba(40, 52, 62, 0.07);
+}
+
+@media screen and (min-width: 650px) {
+  .navbar {
+      grid-template-columns: 1fr auto;
+      padding: 8px 32px;
+  }
+
+  .navbar .navbar__menu {
+      display: none;
+  }
+ 
+  .navbar .navbar__navigation {
+      position: static;
+      width: 100%;
+  }
+ 
+  .navbar .navbar__navigation ul li {
+      display: inline-block;
+  }
+ 
+  .navbar .navbar__navigation ul li a {
+      display: inline-block;
+      width: 90px;
+      text-align: center;
+	  margin: 0;
+  }
+}
+
+@media screen and (max-width: 649px) {
+	.navbar__brand {
+	   margin-left: 90%;
+	}
+
+	.navbar .navbar__navigation {
+		background-color: var(--orange);
+		min-height: 1000px;
+		min-width: 210px;
+		padding: 1.5rem;
+	}
+
+	.navbar .navbar__navigation ul li a {
+		color: white;
+		padding: 12px 0;
+		margin: 3px 0;
+	}
+
+	
+	.search {
+        justify-content: center;
+    }
+
+    .search > div:nth-of-type(2) {
+        width: 100%;
+		padding: 0 1rem;
+    }
+
+    .search-input {
+        width: 100%;
+    }
+
+	.search__title{
+		display: none;
+	}
+}
+
+@media screen and (max-width: 319px) {
+	.navbar__brand {
+		margin-left: 85%;
+	}
+}
+
+@media screen and (max-width: 244px) {
+	.navbar__brand {
+		margin-left: 80%;
+	}
+}
+
+@media screen and (min-width: 769px) {
+	nav a {
+		padding: 12px 20px;
+	}
+}
+
+
+/* footer */
+
+@media screen and (max-width: 768px) {
+	footer {
+		font-size: 11px;
+		border-radius: 20px 20px 0 0;
+	}
+}
+
+@media screen and (max-width: 425px) {
+	footer {
+		font-size: 10px;
+	}
+}
+
+
+
+/* list restaurant */
+
+
+/* heros list restaurant */
+
+@media screen and (max-width: 425px) {
+	.heros {
+		height: 600px;
+	}
+
+	.heros + p {
+		font-size: 28px;
+	}
+}
+
+@media screen and (max-width: 320px) {
+	.heros + p {
+		font-size: 24px;
+	}
+}
+
+@media screen and (max-width: 768px) {
+	.heros {
+		border-radius: 0 0 20px 20px;
+	}
+
+}
+
+
+/* fragment list restaurant */
+
+
+@media screen and (min-width: 650px) {
+	figcaption {
+		font-size: 14px;
+	}
+}
+
+/* content list restaurant */
+@media screen and (max-width: 474px) {
+	.box__name {
+		font-size: 15px;
+	}
+
+	.box__description {
+		font-size: 12px;
+		padding: 0 4% 0 0;
+		text-align: left;
+	}
+
+	.box__rating {
+		max-width: 80%;
+	}
+
+	.box__rating p {
+		font-size: 12px;
+	}
+
+	.box__city {
+		max-width: 80%;
+	}
+
+	.box__city p {
+		font-size: 12px;
+	}
+}
+
+@media screen and (min-width: 697px) {
+	.box__description {
+		font-size: 15px;
+	}
+}
+
+@media screen and (min-width: 768px) {
+	.content {
+		max-width: 1200px;
+		margin: 0 auto;
+	}
+
+	.wrapper {
+		margin: 2% 0 5% 0;
+	}
+
+	.search{
+		padding: 0 1rem;
+	}
+}
+
+/* heros detail */
+
+@media screen and (max-width: 600px) {
+	.heros__detail {
+		max-height: 98%;
+	}
+}
+
+@media screen and (max-width: 375px) {
+	.heros__detail {
+		min-height: 98%;
+	}
+}
+
+@media screen and (min-width: 650px) {
+	.wrapper__detail__page {
+		margin: 0 8%;
+	}
+
+	.box__favorite__detail i {
+		font-size: 32px;
+	}
+
+	.description__detail {
+		font-size: 15px;
+	}
+
+	.wrapper__customerReviews {
+		padding: 0 8%;
+	}
+}
+
+@media screen and (min-width: 769px) {
+	.wrapper__detail__page {
+		margin: 0 14%;
+	}
+
+	.box__detail__title {
+		font-size: 15px;
+	}
+
+	.title__detail {
+		font-size: 20px;
+	}
+
+	.description__detail {
+		font-size: 16px;
+	}
+
+	.box__menus {
+		font-size: 17px;
+	}
+
+	.box__menu {
+		font-size: 15px;
+	}
+
+	.box__favorite__detail i {
+		font-size: 37px;
+	}
+
+	.wrapper__customerReviews {
+		padding: 0 14%;
+	}
+
+	.wrapper__customerReviews > p {
+		font-size: 17px;
+	}
+
+	.box__review b {
+		font-size: 15px;
+	}
+
+	.review__date {
+		font-size: 14px;
+	}
+
+	.box__review__body {
+		font-size: 15px;
+	}
+
+	.inputBox{
+		width: 450px;
+	}
+}
+
+@media screen and (min-width: 1085px) {
+	.wrapper__detail__page {
+		margin: 0 17%;
+	}
+
+	.wrapper__customerReviews {
+		padding: 0 17%;
+	}
+}
+
+
+/* failed request list  */
+
+@media screen and (min-width: 768px) {
+	.request__failed {
+		max-width: 1000px;
+		margin: 0 auto;
+	}
+}
+
+/* failed request detail */
+
+@media screen and (min-width: 650px) {
+	.failed__detail {
+		margin: 5% 14%;
+	}
+}
+
+/* not have a favorite */
+
+@media screen and (min-width: 768px) {
+	.favorite__empty {
+		margin: 0;
+		padding: 20px;
+		width: 100%;
+	}
+
+	.favorite__empty i {
+		font-size: 60px;
+	}
+
+	#favoriteContent {
+		max-width: 1000px;
+		margin: 0 auto;
+	}
+}

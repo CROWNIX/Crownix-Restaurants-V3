@@ -1,0 +1,48 @@
+{
+  "icons": [
+    {
+      "src": "images/icons/maskable/icon_1024x1024.c1fe08a072066ade6bdf2b601e02f8a7.png",
+      "sizes": "1024x1024",
+      "type": "image/png",
+      "purpose": "maskable"
+    },
+    {
+      "src": "images/icons/ios/icon_512x512.ac50ad27074640b0d86db6e70db175fd.png",
+      "sizes": "512x512",
+      "type": "image/png"
+    },
+    {
+      "src": "images/icons/ios/icon_384x384.3dfe02a703a6adc930513dcd4d00eeda.png",
+      "sizes": "384x384",
+      "type": "image/png"
+    },
+    {
+      "src": "images/icons/ios/icon_256x256.d09b84b130fa7315d0434618281a5794.png",
+      "sizes": "256x256",
+      "type": "image/png"
+    },
+    {
+      "src": "images/icons/ios/icon_192x192.2c642ab0c8a864b49430ad4452bb8c6a.png",
+      "sizes": "192x192",
+      "type": "image/png"
+    },
+    {
+      "src": "images/icons/ios/icon_128x128.da54adc3a87696fc3f595a5ca463e067.png",
+      "sizes": "128x128",
+      "type": "image/png"
+    },
+    {
+      "src": "images/icons/ios/icon_96x96.41899fd050f73d1b40efbb8fdd76b479.png",
+      "sizes": "96x96",
+      "type": "image/png"
+    }
+  ],
+  "name": "Crownix restaurants",
+  "short_name": "Crown",
+  "orientation": "portrait",
+  "display": "standalone",
+  "start_url": "./index.html",
+  "description": "List Crownix restaurants",
+  "background_color": "#ffffff",
+  "theme_color": "#f2f2f2"
+}

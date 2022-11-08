@@ -1,0 +1,315 @@
+/* heros */
+
+.wrapper__heros {
+    display: grid;
+    grid-template-columns: 1fr;
+}
+
+.wrapper__detail__page{
+    padding-top: 1rem;
+}
+
+.heros__detail {
+	width: 100%;
+	max-height: 400px;
+	object-fit: cover;
+    object-position: center;
+}
+
+/* wrapperContent */
+
+/* titleDetail */
+.box__title {
+    font-size: 10px;
+    display: grid;
+    grid-template-columns: 2fr 1fr;
+    padding: 0 10px;
+}
+
+.title__detail {
+    font-size: 17px;
+    font-weight: bold;
+    font-family: 'Quicksand', sans-serif;
+}
+
+
+/* button favorite */
+#likeButton{
+    padding: 0;
+    min-width: 44px;
+    min-height: 44px;
+}
+
+#likeButton i{
+    font-size: 44px;
+}
+
+.box__favorite__color {
+    padding: 1px 0;
+    text-align: right;
+    color: palevioletred;
+}
+
+.box__favorite__color button {
+    background-color: transparent;
+	color: rgb(204, 60, 108);
+	border: none;
+	font-size: 20px;
+	padding: 9px 11px;
+	cursor: pointer;
+}
+
+.box__favorite__detail i {
+    font-size: 30px;
+}
+
+.box__detail__title {
+    padding: 6px;
+    font-size: 13px;
+}
+
+/* description */
+
+.description__detail {
+    font-size: 13px;
+    color: var(--black);
+    margin-bottom: 1.5rem;
+    padding: 0 16px;
+}
+
+/* food menu */
+
+.box__menus {
+    font-size: 15px;
+    padding: 5px;
+}
+
+.box__menus p {
+    padding: 0 10px;
+}
+
+.menus__title{
+    font-size: 20px;
+    font-weight: bold;
+}
+
+.menus {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    padding: 0 10px;
+}
+
+.menus li {
+    list-style-type: none;
+    padding: 0.5rem;
+}
+
+.box__menu {
+    font-size: 13px;
+    background-color: var(--orange);
+    color: white;
+    margin: 5px;
+    text-align: center;
+    border-radius: 8px;
+    transition: 0.3s ease-in-out;
+}
+
+.box__menu:hover{
+    transform: translateY(-5px);
+}
+
+
+/* customerReviews */
+
+.wrapper__customerReviews > p {
+    font-size: 20px !important;
+    font-weight: bold;
+    padding: 0 14px;
+    margin-bottom: 1rem;
+}
+
+.reviews {
+    padding: 0 17px;
+}
+
+.reviews li {
+    list-style-type: none;
+}
+
+.box__review {
+    font-size: 14px;
+    text-align: left;
+    margin-bottom: 7px;
+    background-color: #f5d164;
+    padding: 1rem;
+    border-radius: 10px;
+}
+
+.box__review__header {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+}
+
+.review__date {
+    text-align: right;
+    font-weight: lighter;
+    font-size: 13px;
+}
+
+/* rate */
+.formReview{
+    padding: 0 17px;
+}
+
+.inputBox{
+    position: relative;
+    width: 100%;
+    margin-bottom: 1rem;
+}
+
+.inputBox input{
+    width: 100%;
+    min-height: 44px;
+    padding: 10px;
+    border: 1px solid var(--orange);
+    background: white;
+    border-radius: 5px;
+    outline: none;
+    color: var(--black);
+    font-size: 1em;
+}
+
+.inputBox span{
+    position: absolute;
+    left: 0;
+    padding: 10px;
+    pointer-events: none;
+    font-size: 1em;
+    color: var(--black);
+    text-transform: uppercase;
+    transition: 0.3s;
+}
+
+
+
+.inputBox input:valid ~ span,
+.inputBox input:focus ~ span
+{
+    color: var(--orange);
+    transform: translateX(10px) translateY(-7px);
+    font-size: 0.65em;
+    padding: 0 10px;
+    background: #1d2b3a;
+    border-left: 1px solid var(--orange);
+    border-right: 1px solid var(--orange);
+    letter-spacing: 0.2em;
+}
+
+.inputBox input:valid ~ span,
+.inputBox input:focus ~ span{
+    background: var(--orange);
+    color: var(--black);
+    border-radius: 2px;
+}
+
+.inputBox input:valid,
+.inputBox input:focus{
+    border: 1px solid var(--orange);
+}
+
+.reviewButton{
+    position: relative;
+    background: white;
+    border: 1px solid var(--orange);
+    color: var(--black);
+    text-transform: uppercase;
+    font-size: 1em;
+    letter-spacing: 0.1em;
+    font-weight: 400;
+    padding: 10px 20px;
+    transition: 0.5s;
+    cursor: pointer;
+    border-radius: 5px;
+}
+
+.reviewButton:hover{
+    letter-spacing: 0.25em;
+    background: var(--orange);
+    color: white;
+    box-shadow: 0 0 30px var(--orange);
+}
+
+.reviewButton::before{
+    content: '';
+    position: absolute;
+    inset: 2px;
+    background: white;
+    border: 1px solid var(--orange);
+}
+
+.reviewButton:hover::before{
+    border: 1px solid white;
+}
+
+.reviewButton:hover::before{
+    background: var(--orange);
+}
+
+.reviewButton span{
+    position: relative;
+    z-index: 1;
+}
+
+.reviewButton i{
+    position: absolute;
+    inset: 0;
+    display: block;
+}
+
+.reviewButton i::before{
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 80%;
+    width: 10px;
+    height: 4px;
+    background-color: var(--orange);
+    transform: translateX(-50%) skewX(325deg);
+    transition: 0.5s;
+}
+
+.reviewButton:hover i::before{
+    background: white;
+}
+
+.reviewButton:hover i::before{
+    width: 20px;
+    left: 20%;
+}
+
+.reviewButton i::after{
+    content: '';
+    position: absolute;
+    bottom: 0;
+    left: 20%;
+    width: 10px;
+    height: 4px;
+    background-color: var(--orange);
+    transform: translateX(-50%) skewX(325deg);
+    transition: 0.5s;
+}
+
+.reviewButton:hover i::after{
+    background: white;
+}
+
+.reviewButton:hover i::after{
+    width: 20px;
+    left: 80%;
+}
+
+/* request failed */
+.failed__detail {
+    position: relative;
+    margin: 20px;
+}

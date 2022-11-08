@@ -1,0 +1,37 @@
+.heros-favorite {
+    filter: brightness(80%);
+}
+
+.favourite__restaurant span{
+	color: var(--orange);
+	animation: hue 5s infinite;
+}
+
+#favoriteContent {
+	margin-top: 1rem;
+    width: 100%;
+    padding: 1rem;
+    gap: 1.5rem;
+    display: flex;
+    flex-flow: wrap;
+    justify-content: center;
+}
+
+#favoriteContent a {
+	text-decoration: none;
+}
+
+.empty__favorite {
+	width: 30rem;
+	padding: 15px 12px;
+	background-color: #f5d164;
+	text-align: center;
+	margin-top: 1rem;
+	font-size: 1.2em;
+	border-radius: 10px;
+	color: black;
+}
+
+.empty__favorite i {
+	font-size: 50px;
+}
