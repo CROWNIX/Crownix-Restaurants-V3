@@ -7,71 +7,71 @@ Before(({ I }) => {
 });
 
 Scenario('showing empty liked movies', ({ I }) => {
-    I.seeElement('#favoriteContent');
-    I.see('add your favorite restaurant', '.empty__favorite');
+  I.seeElement('#favoriteContent');
+  I.see('add your favorite restaurant', '.empty__favorite');
 });
 
 Scenario('Liking one restaurant', async ({ I }) => {
-    I.see('add your favorite restaurant', '.empty__favorite');
-    I.amOnPage('/');
+  I.see('add your favorite restaurant', '.empty__favorite');
+  I.amOnPage('/');
 
-    I.seeElement('.card .card__detail');
+  I.seeElement('.card .card__detail');
 
-    const detailButton = locate('.card .card__detail').first();
-    const firstRestaurant = locate('.card').first();
-    const firstRestaurantTitle = await I.grabTextFrom(firstRestaurant);
+  const detailButton = locate('.card .card__detail').first();
+  const firstRestaurant = locate('.card').first();
+  const firstRestaurantTitle = await I.grabTextFrom(firstRestaurant);
 
-    I.click(detailButton);
-    
-    I.wait(3);
+  I.click(detailButton);
 
-    I.seeElement('#likeButton');
-    I.click('#likeButton');
-    
-    I.amOnPage('/#/favorite');
-    I.seeElement('.card');
+  I.wait(3);
 
-    const likedRestaurantTitle = await I.grabTextFrom('.card');
-    assert.strictEqual(firstRestaurantTitle, likedRestaurantTitle);
+  I.seeElement('#likeButton');
+  I.click('#likeButton');
+
+  I.amOnPage('/#/favorite');
+  I.seeElement('.card');
+
+  const likedRestaurantTitle = await I.grabTextFrom('.card');
+  assert.strictEqual(firstRestaurantTitle, likedRestaurantTitle);
 });
 
 Scenario('Unliking one restaurant', async ({ I }) => {
-    I.see('add your favorite restaurant', '.empty__favorite');
-    I.amOnPage('/');
+  I.see('add your favorite restaurant', '.empty__favorite');
+  I.amOnPage('/');
 
-    I.seeElement('.card .card__detail');
+  I.seeElement('.card .card__detail');
 
-    const detailButton = locate('.card .card__detail').first();
-    const firstRestaurant = locate('.card').first();
-    const firstRestaurantTitle = await I.grabTextFrom(firstRestaurant);
+  const detailButton = locate('.card .card__detail').first();
+  const firstRestaurant = locate('.card').first();
+  const firstRestaurantTitle = await I.grabTextFrom(firstRestaurant);
 
-    I.click(detailButton);
+  I.click(detailButton);
 
-    I.wait(3);
+  I.wait(3);
 
-    I.seeElement('#likeButton');
-    I.click('#likeButton');
+  I.seeElement('#likeButton');
+  I.click('#likeButton');
 
-    I.amOnPage('/#/favorite');
-    I.seeElement('.card');
+  I.amOnPage('/#/favorite');
+  I.seeElement('.card');
 
-    const likedRestaurantTitle = await I.grabTextFrom('.card');
-    assert.strictEqual(firstRestaurantTitle, likedRestaurantTitle);
+  const likedRestaurantTitle = await I.grabTextFrom('.card');
+  assert.strictEqual(firstRestaurantTitle, likedRestaurantTitle);
 
-    const firstFavoriteRestaurant = locate('#favoriteContent .card').first();
-    const firstFavoriteRestaurantTitle = await I.grabTextFrom(firstFavoriteRestaurant);
-    
-    assert.strictEqual(firstRestaurantTitle, firstFavoriteRestaurantTitle);
+  const firstFavoriteRestaurant = locate('#favoriteContent .card').first();
+  const firstFavoriteRestaurantTitle = await I.grabTextFrom(firstFavoriteRestaurant);
 
-    I.click(detailButton);
+  assert.strictEqual(firstRestaurantTitle, firstFavoriteRestaurantTitle);
 
-    I.wait(3);
+  I.click(detailButton);
 
-    I.seeElement('#likeButton');
-    I.click('#likeButton');
+  I.wait(3);
 
-    I.amOnPage('/#/favorite');
-    I.seeElement('#favoriteContent');
+  I.seeElement('#likeButton');
+  I.click('#likeButton');
 
-    I.see("add your favorite restaurant", '.empty__favorite');
+  I.amOnPage('/#/favorite');
+  I.seeElement('#favoriteContent');
+
+  I.see('add your favorite restaurant', '.empty__favorite');
 });

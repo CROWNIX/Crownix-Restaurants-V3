@@ -218,6 +218,8 @@
 }
 
 .reviewButton{
+    min-width: 50px;
+    min-height: 50px;
     position: relative;
     background: white;
     border: 1px solid var(--orange);
